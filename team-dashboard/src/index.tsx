@@ -1,11 +1,10 @@
 /* @refresh reload */
 import { render } from 'solid-js/web';
-
 import 'tailwindcss/tailwind.css';
-
 import './index.css';
 import App from './App';
-import { Route, Router, Routes } from '@solidjs/router';
+import { Router } from '@solidjs/router';
+import { SettingsProvider } from './components/providers/SettingsProvider';
 
 const root = document.getElementById('root');
 
@@ -18,7 +17,9 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 render(
   () => (
     <Router>
-      <App />
+      <SettingsProvider>
+        <App />
+      </SettingsProvider>
     </Router>
   ),
   root!,

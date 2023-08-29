@@ -1,30 +1,9 @@
 import { ApexOptions } from 'apexcharts';
 import { SolidApexCharts } from 'solid-apexcharts';
+import { SettingsContextValue, useSettings } from '../providers/SettingsProvider';
 
 function Charts() {
-  const persons: any[] = [
-    {
-      name: 'Sergei Gladyshev',
-      utcOffset: -180,
-      startWork: new Date().setUTCHours(9, 30, 0, 0),
-      endWork: new Date().setUTCHours(18, 0, 0, 0),
-      gaps: [new Date().setUTCHours(12, 0, 0, 0), new Date().setUTCHours(15, 0, 0, 0)],
-    },
-    {
-      name: 'Andrew Jackson',
-      utcOffset: -100,
-      startWork: new Date().setUTCHours(9, 30, 0, 0),
-      endWork: new Date().setUTCHours(18, 0, 0, 0),
-      gaps: [new Date().setUTCHours(13, 0, 0, 0), new Date().setUTCHours(16, 30, 0, 0)],
-    },
-    {
-      name: 'Thomas Jefferson',
-      utcOffset: -100,
-      startWork: new Date().setUTCHours(10, 30, 0, 0),
-      endWork: new Date().setUTCHours(19, 0, 0, 0),
-      gaps: [new Date().setUTCHours(10, 0, 0, 0), new Date().setUTCHours(10, 30, 0, 0)],
-    },
-  ];
+  const { settings } = useSettings() as SettingsContextValue;
 
   const getMorningTime = (persons: Array<any>) => {
     return {
@@ -64,7 +43,7 @@ function Charts() {
     };
   };
   const data = {
-    series: [getMorningTime(persons), getWorkTime(persons), getGaps(persons), getEviningTime(persons)],
+    series: [getMorningTime(settings()), getWorkTime(settings()), getGaps(settings()), getEviningTime(settings())],
     options: {
       chart: {
         height: 350,
