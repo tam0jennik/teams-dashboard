@@ -26,7 +26,7 @@ const defaultSettings: Array<ITeamMate> = [
     gaps: [new Date().setUTCHours(10, 0, 0, 0), new Date().setUTCHours(10, 30, 0, 0)],
   },
 ];
-const testSettings = encode([defaultSettings]);
+const testSettings = encode([defaultSettings[0]]);
 console.log('last: ', testSettings);
 
 export type SettingsContextValue = {
