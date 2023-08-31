@@ -10,6 +10,8 @@ const defaultSettings: Array<ITeamMate> = [
     startWork: new Date().setUTCHours(9, 30, 0, 0),
     endWork: new Date().setUTCHours(18, 0, 0, 0),
     gaps: [new Date().setUTCHours(12, 0, 0, 0), new Date().setUTCHours(15, 0, 0, 0)],
+    email: 'tBk5X@example.com',
+    role: 'Developer',
   },
   {
     name: 'Andrew Jackson',
@@ -17,6 +19,8 @@ const defaultSettings: Array<ITeamMate> = [
     startWork: new Date().setUTCHours(9, 30, 0, 0),
     endWork: new Date().setUTCHours(18, 0, 0, 0),
     gaps: [new Date().setUTCHours(13, 0, 0, 0), new Date().setUTCHours(16, 30, 0, 0)],
+    email: 'NpPbD@example.com',
+    role: 'Developer',
   },
   {
     name: 'Thomas Jefferson',
@@ -24,6 +28,8 @@ const defaultSettings: Array<ITeamMate> = [
     startWork: new Date().setUTCHours(10, 30, 0, 0),
     endWork: new Date().setUTCHours(19, 0, 0, 0),
     gaps: [new Date().setUTCHours(10, 0, 0, 0), new Date().setUTCHours(10, 30, 0, 0)],
+    email: "Admin's email",
+    role: 'Admin',
   },
 ];
 const testSettings = encode([defaultSettings[0]]);

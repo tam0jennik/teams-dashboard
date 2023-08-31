@@ -28,6 +28,8 @@ export type UTCOffses =
 
 export interface ITeamMate {
     name: string;
+    email: string;
+    role: string;
     utcOffset: UTCOffses,
     startWork: number,
     endWork: number,

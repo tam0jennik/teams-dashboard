@@ -4,7 +4,7 @@ import Header from './components/Header';
 import LeftMenu from './components/LeftMenu';
 import { Route, Routes, useLocation, useParams } from '@solidjs/router';
 import TimeBoard from './pages/TimeBoard';
-import Team from './pages/Team';
+import Team from './pages/Team/Team';
 import { useSettings } from './components/providers/SettingsProvider';
 
 const App: Component = () => {
